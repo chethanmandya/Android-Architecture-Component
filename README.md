@@ -12,7 +12,7 @@ For the backend of our app we will use the "Room Persistence Library", which wor
 
 Together, this whole structure constitues an "MVVM" (Model-View-ViewModel) architecture, which follows the single responsibility and separation of concerns principles.
 
-
+![alt text](https://github.com/chethu/Android-architecture-Component/blob/master/app/src/main/res/drawable/AndroidArchitecturalComponent.png)
 
 Room : it is wrapper around sqlite that takes care most of complicated stuff that we previously had to do ourselves, we have to write much less boilerplate code to create tables and make database operations. Room provides compile time verifications for our SQL lite. Example like we are trying to create column that doesn’t exist Or if we do type error in SQL statement , we can’t even compile our code, it is obviously much better than having the app crash at run time. 
 
