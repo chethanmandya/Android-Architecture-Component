@@ -1,4 +1,4 @@
-# Android-architecture-Component
+# Android-Architecture-Component
 Project to demonstrate Android Architecture Component libraries (Room, ViewModel, LiveData and LifeCycle) 
 
 
