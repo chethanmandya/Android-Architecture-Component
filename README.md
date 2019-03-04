@@ -3,7 +3,7 @@ Project to demonstrate Android Architecture Component libraries (Room, ViewModel
 
 
 
-In this project , I have a note taking app, using the Android Architecture Component libraries (Room, ViewModel, LiveData and LifeCycle), a RecyclerView and Java. The data will be stored in an SQLite database and supports insert, read, update and delete operations. For this I have followed the official recommendations from the "Guide to App Architecture" (link below).
+In this sample project , I have a note taking app, using the Android Architecture Component libraries (Room, ViewModel, LiveData and LifeCycle), a RecyclerView and Java. The data will be stored in an SQLite database and supports insert, read, update and delete operations. For this I have followed the official recommendations from the "Guide to App Architecture" (link below).
 
 We will learn what the Architecture Components are, how they work and why we need them. We will learn about the problems that arise from the Activity and Fragment lifecycle, configuration changes and bloated, tightly coupled classes and how ViewModel and LiveData can help us with that.
 
