@@ -7,6 +7,9 @@ https://developer.android.com/topic/libraries/architecture ,
 
 https://developer.android.com/jetpack/docs/guide
 
+https://github.com/googlesamples/android-architecture-components
+
+
 This sample will help you to learn what the Architecture Components are, how they work and why we need them. With help of ViewModel and LiveData, you will learn how to overcome some of the common problems that arise from the Activity and Fragment lifecycle, configuration changes and bloated, tightly coupled classes. 
 
 
