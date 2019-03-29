@@ -21,6 +21,7 @@ Together, this whole structure constitues an "MVVM" (Model-View-ViewModel) archi
 
 ![alt text](https://github.com/chethu/Android-architecture-Component/blob/master/app/src/main/res/drawable/AndroidArchitecturalComponent.png)
 
+ViewModel works with Room and LiveData to replace the loader. The ViewModel ensures that the data survives a device configuration change. Room informs your LiveData when the database changes, and the LiveData, in turn, updates your UI with the revised data.
 
 Room : it is wrapper around sqlite that takes care most of complicated stuff that we previously had to do ourselves, we will write much less boilerplate code to create tables and make database operations. Room provides compile time verifications for our SQL lite. Example like we are trying to create column that doesn’t exist Or if we do type error in SQL statement , we can’t even compile our code, it is obviously much better than having the app crash at run time. 
 
