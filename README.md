@@ -13,7 +13,16 @@ https://github.com/googlesamples/android-architecture-components
 This sample will help you to learn what the Architecture Components are, how they work and why we need them. With help of ViewModel and LiveData, you will learn how to overcome some of the common problems that arise from the Activity and Fragment lifecycle, configuration changes and bloated, tightly coupled classes. 
 
 
-ViewModels store and manage UI related data, they survive configuration changes and can be used seemlessly by the newly created activity. LiveData is an observable dataholder and it is life-cycle aware, which means it automatically starts and stops updating the UI-controller at the right times in it's lifecycle.
+ViewModels store and manage UI related data, they survive configuration changes and can be used seemlessly by the newly created activity.
+Here's why that's actually useful. Rotating phone is considered to be configuration changes, configuration changes causes your whole activity to torn down and then recreated, if you don't store and restore data from the destroyed activity, you may lose that data and end up with weired UI bags or even crashes. So enter the View model which, of course survives configuration changes, instead of storing all of your UI data in your activity, put it in the view model. now, this helps with configuration changes but it's also just general good software design, one common pit fall when developing for android is putting a lot of variables, logic and data into your activities and fragments, this create large unmaintainable mess of a class and violates the single responsiblity principle. 
+
+You can use view models to easily divide out that responsiblity. The view models will be responsilbe for holding all of the data that you're going to show in your UI and then the activity is only responsible for knowing how to draw that data to the screen and receiving user interactions, but not for processing them .
+
+Make sure your view model doesn't become bloted with too many responsibilities. To avoid this, you can create a presenter class or implement a more fully fledgeed clean architechture.
+
+
+
+LiveData is an observable dataholder and it is life-cycle aware, which means it automatically starts and stops updating the UI-controller at the right times in it's lifecycle.
 
 For the backend of our app we will use the "Room Persistence Library", which works as a wrapper around SQLite and helps us reduce boilerplate code by making extensive use of Annotations. Instead of creating an SQLiteOpenHelper, we simply turn Java classes into "entities" to create tables, and use "Data Access Objects" (DAO) to query these tables and make operations on them. Room also provides compile time verification for SQL statements, so we run into fewer runtime exceptions, caused by typos and invalid queries. We will also use a "Repository" class that works as another abstraction layer between the ViewModel and the underlying data model.
 
