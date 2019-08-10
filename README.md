@@ -57,7 +57,7 @@ what makes live data different from other observables is that it is also life cy
 
 Room is build to work well with live data, Room can return live data objects which are automatically notified when the database data changes and have their data loaded in a background thread. 
 
-Live data also provides transformation, ***include map, switch map, mediator live data for your own custom transformation*** 
+Live data also provides transformation, include map, switch map, mediator live data for your own custom transformation
 
 ***Maps*** lets you apply a function to the output of Livedata A and then propagate the results downstream to live data B. 
 For example - you could use Live data to take user object and instead output a string of the users combined first and last name. 
